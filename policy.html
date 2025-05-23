@@ -8,22 +8,47 @@
   </head>
 <body class="bg-[#F8FFE8] text-gray-800">
 
-  <!-- Navbar -->
-  <nav class="bg-white shadow p-4 flex justify-between items-center">
-    <div class="flex items-center gap-3">
-      <img src="assets/images/logo-img.png" alt="Diet Fusion Logo" class="h-12">
-      <div class="text-xl font-bold py-3">Diet Fusion</div>
-    </div>
-    <div class="space-x-4">
+ <!-- Navbar -->
+  <header class="bg-green-600 text-white p-4 flex justify-between items-center">
+    <div class="text-xl font-bold">Diet Fusion</div>
+    <nav class="space-x-6 hidden md:flex">
       <a href="index.html" class="hover:underline">Home</a>
-      <a href="about.html" class="hover:underline">About</a>
+      <a href="about.html" class="hover:underline font-bold underline">About</a>
       <a href="blog.html" class="hover:underline">Blog</a>
       <a href="pricing.html" class="hover:underline">Pricing</a>
       <a href="bmi.html" class="hover:underline">BMI</a>
-      <a href="booking.html" class="hover:underline">Booking</a>
       <a href="contact.html" class="hover:underline">Contact</a>
-    </div>
+      <a href="booking.html" class="hover:underline">Booking</a>
+    </nav>
+
+    <!-- Mobile menu button -->
+    <button id="menu-btn" class="md:hidden focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" 
+           stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </header>
+
+  <!-- Mobile menu -->
+  <nav id="mobile-menu" class="hidden flex-col space-y-8 bg-green-600 text-white p-4 md:hidden">
+    <a href="index.html" class="hover:underline">Home</a>
+    <a href="about.html" class="hover:underline font-bold underline">About</a>
+    <a href="blog.html" class="hover:underline">Blog</a>
+    <a href="pricing.html" class="hover:underline">Pricing</a>
+    <a href="bmi.html" class="hover:underline">BMI</a>
+    <a href="contact.html" class="hover:underline">Contact</a>
+    <a href="booking.html" class="hover:underline">Booking</a>
   </nav>
+
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
 
   <!-- Main Content -->
   <section class="max-w-4xl mx-auto my-10 px-6">
@@ -54,15 +79,16 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-white shadow mt-10 p-6 text-center text-sm">
-    <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-      <a href="policy.html" class="text-green-700 hover:underline">Privacy Policy</a>
-      <a href="https://www.instagram.com/dietfusion_official/?hl=en" target="_blank" class="text-green-700 hover:underline">Instagram</a>
-      <a href="https://www.youtube.com/" target="_blank" class="text-green-700 hover:underline">YouTube</a>
+  <footer class="bg-green-600 text-white p-6 text-center space-y-4">
+    <div>
+      &copy; 2025 Diet Fusion. All rights reserved.
     </div>
-    <p class="mt-2 text-gray-500">© 2025 Diet Fusion. All rights reserved.</p>
+    <div class="space-x-6">
+      <a href="policy.html" class="hover:underline">Privacy Policy</a>
+      <a href="https://www.instagram.com/dietfusion_official/?hl=en" target="_blank" rel="noopener noreferrer" class="hover:underline">Instagram</a>
+    </div>
   </footer>
-
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+  <div class="elfsight-app-5a63580b-f895-4dd9-a915-a187d5c67b99" data-elfsight-app-lazy></div>
 </body>
 </html>
-
