@@ -2,7 +2,7 @@
 Welcome to DietFusion, a professionally designed yet simple website for a dietitian's business. This website is built using HTML, Tailwind CSS, and JavaScript, with Blogger as the blogging platform and Elfsight for widgets.
 
 ## Live Website
-🔗 dietfusion.netlify.app
+[🔗Link](https://dietfusion.netlify.app)
 
 ## Technologies Used
 
