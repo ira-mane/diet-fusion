@@ -14,6 +14,5 @@ JavaScript - Adding interactive elements.
 
 Blogger - Powering the blog section.
 
-Elfsight - Integrating third-party widgets for enhanced functionality.
 
 ## This repository is publicly available on GitHub for educational and reference purposes only. Unauthorized copying, reproduction, or use for commercial purposes without permission is strictly prohibited.
