@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description"
+    content="Discover personalized diet plans to achieve your health goals. Expert tips and nutrition advice.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="Diet Fusion, Diet Plans, Nutrition, Healthy Living, Wellness">
+  <meta name="author" content="Diet Fusion Team">
+  <meta name="robots" content="index, follow">
+  <title>Best Diet Plans for Healthy Living | DietFusion</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-green-600 text-white p-4 flex justify-between items-center">
+    <div class="flex items-left gap-2">
+      <img src="assets/images/logo-img.png" alt="Diet Fusion Logo" class="h-14 w-auto">
+      <div class="text-xl font-bold py-3">Diet Fusion</div>
+    </div>
+    <nav class="space-x-6 hidden md:flex">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="about.html" class="hover:underline">About</a>
+      <a href="blog.html" class="hover:underline">Blog</a>
+      <a href="pricing.html" class="hover:underline">Pricing</a>
+      <a href="bmi.html" class="hover:underline">BMI</a>
+      <a href="faq.html" class="hover:underline">FAQ</a>
+      <a href="contact.html" class="hover:underline">Contact</a>
+      <a href="booking.html" class="hover:underline">Booking</a>
+    </nav>
+
+    <!-- Mobile menu button -->
+    <button id="menu-btn" class="md:hidden focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" viewBox="0 0 24 24">
+        <path d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </header>
+
+  <!-- Mobile menu -->
+  <nav id="mobile-menu" class="hidden flex-col space-y-8 bg-green-600 text-white p-4 md:hidden">
+    <a href="index.html" class="hover:underline">Home</a>
+    <a href="about.html" class="hover:underline">About</a>
+    <a href="blog.html" class="hover:underline">Blog</a>
+    <a href="pricing.html" class="hover:underline">Pricing</a>
+    <a href="bmi.html" class="hover:underline">BMI</a>
+    <a href="faq.html" class="hover:underline">FAQ</a>
+    <a href="contact.html" class="hover:underline">Contact</a>
+    <a href="booking.html" class="hover:underline">Booking</a>
+  </nav>
+
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+<section class="max-w-4xl mx-auto my-16 px-4 text-center">
+  <h2 class="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+  <div class="space-y-4 text-left max-w-xl mx-auto">
+    <details class="p-4 border rounded cursor-pointer">
+      <summary class="font-semibold">1. What is Diet Fusion?</summary>
+      <p class="mt-2 text-gray-700">
+        Diet Fusion is a premium wellness brand offering science-backed, customized nutrition plans and hormone-friendly meals to restore balance, energy, and health. We specialize in hormonal issues (thyroid, PCOS, menopause), gut health, metabolic disorders, and sustainable fat loss — without starving or extreme diets.
+      </p>
+    </details>
+    <details class="p-4 border rounded cursor-pointer">
+      <summary class="font-semibold">2. How is Diet Fusion different from other diet or meal services?</summary>
+      <p class="mt-2 text-gray-700">
+        We don’t do cookie-cutter diets or generic salads. We combine:<br><br>
+        Functional Nutrition + Ayurvedic principles<br>
+        Hormone-friendly meals designed by experts<br>
+        Premium, personalized plans for PCOS, thyroid, gut health, diabetes, and more<br>
+        Subscription-based, chef-curated meals delivered fresh<br><br>
+        We treat the root cause — not just symptoms.
+      </p>
+    </details>
+    <details class="p-4 border rounded cursor-pointer">
+      <summary class="font-semibold">3. Do you offer only diet plans, or meals too?</summary>
+      <p class="mt-2 text-gray-700">
+        We offer both:<br><br>
+        Personalized Diet Plans (3–12 month programs)<br>
+        Cloud Kitchen Meals via subscription (available in Sakinaka & nearby areas)<br><br>
+        Each is tailored to support your health condition, goals, and schedule.
+      </p>
+    </details>
+    <details class="p-4 border rounded cursor-pointer">
+      <summary class="font-semibold">4. I have PCOS/Thyroid/Gut issues. Will your diet work for me?</summary>
+      <p class="mt-2 text-gray-700">
+        Yes. In fact, we specialize in these conditions.<br>
+        Our approach reduces inflammation, balances hormones naturally, improves digestion, supports better cycles, and reduces stubborn fat.
+      </p>
+    </details>
+    <details class="p-4 border rounded cursor-pointer">
+      <summary class="font-semibold">5. What kind of clients do you work with?</summary>
+      <p class="mt-2 text-gray-700">
+        We work with high-performing professionals, women with hormonal imbalances, corporate leaders, and busy individuals looking for sustainable results, not quick fixes. If you're ready to invest in long-term wellness, we’re for you.
+      </p>
+    </details>
+    <details class="p-4 border rounded cursor-pointer">
+      <summary class="font-semibold">6. Do you provide one-on-one support?</summary>
+      <p class="mt-2 text-gray-700">
+        Yes. All premium plans include:<br><br>
+        A personalized onboarding call<br>
+        Regular progress check-ins<br>
+        Direct support from our expert team via WhatsApp or email<br><br>
+        This is not a DIY plan — we walk with you throughout.
+      </p>
+    </details>
+    <details class="p-4 border rounded cursor-pointer">
+      <summary class="font-semibold">7. How long will it take to see results?</summary>
+      <p class="mt-2 text-gray-700">
+        Results vary, but most clients notice changes in:<br><br>
+        7–14 days: Energy, bloating, mood<br>
+        30 days: Digestion, inflammation, skin, weight loss<br>
+        90+ days: Hormonal balance, metabolism reset, PCOS relief<br><br>
+        This is a healing-first approach, not a crash diet.
+      </p>
+    </details>
+    <details class="p-4 border rounded cursor-pointer">
+      <summary class="font-semibold">8. Where do you deliver meals?</summary>
+      <p class="mt-2 text-gray-700">
+        Our kitchen is based in Sakinaka, Mumbai, and we deliver to nearby premium locations.<br>
+        For diet plans, we serve clients across India and internationally.
+      </p>
+    </details>
+    <details class="p-4 border rounded cursor-pointer">
+      <summary class="font-semibold">9. Is this plan safe for diabetes, cholesterol, or hypertension?</summary>
+      <p class="mt-2 text-gray-700">
+        Yes. All our plans are medically reviewed and curated to manage chronic conditions safely.<br>
+        We work alongside your doctor's advice and medications.
+      </p>
+    </details>
+    <details class="p-4 border rounded cursor-pointer">
+      <summary class="font-semibold">10. What are your pricing options?</summary>
+      <p class="mt-2 text-gray-700">
+        Meal Subscriptions: Starting at ₹150/- per meal<br><br>
+        Diet Plans: Monthly, 3, 6, 9, and 12-month options<br>
+        Custom pricing depends on goals, condition, and duration — we don’t do “one-size-fits-all” plans.
+      </p>
+    </details>
+    <details class="p-4 border rounded cursor-pointer">
+      <summary class="font-semibold">11. Will I have to give up my favourite foods forever?</summary>
+      <p class="mt-2 text-gray-700">
+        Not at all. Our plans include smart swaps, cheat strategies, and even hormone-friendly desserts. We believe in balance — not restriction.
+      </p>
+    </details>
+    <details class="p-4 border rounded cursor-pointer">
+      <summary class="font-semibold">12. Can I lose weight even with thyroid/PCOS?</summary>
+      <p class="mt-2 text-gray-700">
+        Absolutely. We’ve helped 100s of clients with PCOS, Hashimoto’s, insulin resistance, and more shed stubborn weight by targeting hormonal root causes, not just calories.
+      </p>
+    </details>
+    <details class="p-4 border rounded cursor-pointer">
+      <summary class="font-semibold">13. Is this program for men too?</summary>
+      <p class="mt-2 text-gray-700">
+        Yes. We have specialized plans for male metabolic syndrome, testosterone support, gut reset, and fat loss without crash diets.
+      </p>
+    </details>
+    <details class="p-4 border rounded cursor-pointer">
+      <summary class="font-semibold">14. Do you offer refunds?</summary>
+      <p class="mt-2 text-gray-700">
+        Since we deliver a premium, high-touch service, we don’t offer refunds once a plan has started. However, we guarantee full support and customization to help you succeed.
+      </p>
+    </details>
+    <details class="p-4 border rounded cursor-pointer">
+      <summary class="font-semibold">15. How do I get started?</summary>
+      <p class="mt-2 text-gray-700">
+        Click the Book Consulation or whatsapp chat icon button on this page. We’ll send you a short intake form, and our team will reach out to schedule your call within 24–48 hours.
+      </p>
+    </details>
+  </div>
+</section>
+
+
+<!-- Footer -->
+  <footer class="bg-green-600 text-white p-6 text-center space-y-4 mt-auto">
+    <div>&copy; 2025 Diet Fusion. All rights reserved.</div>
+    <div class="space-x-6">
+      <a href="policy.html" class="hover:underline">Privacy Policy</a>
+      <a href="https://www.instagram.com/dietfusion_official/?hl=en" target="_blank" class="hover:underline">Instagram</a>
+    </div>
+    <div class="mt-4 text-sm">
+      Made & Designed by <strong>Ira</strong> | Email: 
+      <a href="mailto:irammane14@gmail.com" class="hover:underline">irammane14@gmail.com</a>
+    </div>
+  </footer>
+<a href="https://wa.me/919867089284" target="_blank" 
+   style="position: fixed; bottom: 20px; right: 20px; background-color: white; color: white; 
+          border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; 
+          justify-content: center; box-shadow: 0 2px 10px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none;">
+  <img src="assets/images/whatsapp-icon.png" alt="WhatsApp" style="width: 32px; height: 32px;" />
+</a>
+</body>
+</html>
+
