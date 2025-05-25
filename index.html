@@ -96,7 +96,20 @@
 
     </div>
   </section>
+  <!-- health msg -->
+<div id="health-strip" class="text-green-800 p-2 text-center text-sm font-medium overflow-hidden whitespace-nowrap animate-marquee"></div>
+<style>
+@keyframes marquee {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
 
+.animate-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+}
+</style>
 
   <!-- Info Section -->
   <section class="bg-white py-10 px-6">
@@ -255,21 +268,29 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-green-600 text-white p-6 text-center space-y-4 mt-auto">
-    <div>&copy; 2025 Diet Fusion. All rights reserved.</div>
-    <div class="space-x-6">
-      <a href="policy.html" class="hover:underline">Privacy Policy</a>
-      <a href="https://www.instagram.com/dietfusion_official/?hl=en" target="_blank"
-        class="hover:underline">Instagram</a>
+  <footer class="bg-green-600 text-white px-6 py-8 text-center md:text-left space-y-4 mt-auto">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+    
+    <!-- Left: Copyright -->
+    <div class="text-sm">
+      &copy; 2025 <strong>Diet Fusion</strong>. All rights reserved.
     </div>
-    <div class="mt-4 text-sm">
-      Made & Designed by <strong>Ira</strong> | Email:
+
+    <!-- Center: Links -->
+    <div class="space-x-6 text-sm">
+      <a href="policy.html" class="hover:underline">Privacy Policy</a>
+      <a href="terms.html" class="hover:underline">Terms & Conditions</a>
+      <a href="https://www.instagram.com/dietfusion_official/?hl=en" target="_blank" class="hover:underline">Instagram</a>
+    </div>
+
+    <!-- Right: Designer Credit -->
+    <div class="text-sm text-center md:text-right">
+      Made & Designed by <strong>Ira</strong><br>
       <a href="mailto:irammane14@gmail.com" class="hover:underline">irammane14@gmail.com</a>
     </div>
-  </footer>
-<!-- Whatsapp script -->
-  <!-- <script src="https://static.elfsight.com/platform/platform.js" async></script>
-  <div class="elfsight-app-5a63580b-f895-4dd9-a915-a187d5c67b99" data-elfsight-app-lazy></div>  -->
+  </div>
+</footer>
+
 
   <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/919867089284" target="_blank" 
@@ -332,6 +353,35 @@
   window.addEventListener('resize', () => {
     slider.style.transform = `translateX(-${(images[0].clientWidth + 16) * currentIndex}px)`;
   });
+</script>
+<!-- Health message display -->
+ <script>
+  async function loadHealthStrip() {
+    try {
+      const res = await fetch('data.json');
+      const data = await res.json();
+
+      const today = new Date();
+      const todayStr = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
+      const todayObservance = data.find(item => item.date === todayStr && item.observance);
+
+      let message = '';
+      if (todayObservance) {
+        message = `🗓️ Today is ${todayObservance.observance} — ${todayObservance.fact}`;
+      } else {
+        const facts = data.filter(item => item.fact && !item.observance);
+        const random = facts[Math.floor(Math.random() * facts.length)];
+        message = `💡 Did you know? ${random.fact}`;
+      }
+
+      document.getElementById('health-strip').textContent = message;
+    } catch (err) {
+      console.error('Failed to load health data:', err);
+    }
+  }
+
+  loadHealthStrip();
 </script>
 </body>
 

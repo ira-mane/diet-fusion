@@ -1,0 +1,234 @@
+[
+    {
+        "type": "fact",
+        "text": "Drinking water can boost your metabolism by up to 30% for 30-40 minutes."
+    },
+    {
+        "type": "fact",
+        "text": "Regular exercise reduces the risk of chronic diseases like diabetes and heart disease."
+    },
+    {
+        "type": "day",
+        "date": "2025-05-31",
+        "text": "World No Tobacco Day"
+    },
+    {
+        "type": "day",
+        "date": "2025-11-14",
+        "text": "World Diabetes Day"
+    },
+    {
+        "type": "day",
+        "date": "2025-04-07",
+        "text": "World Health Day"
+    },
+    {
+        "type": "day",
+        "date": "2025-10-10",
+        "text": "World Mental Health Day"
+    },
+    {
+        "type": "day",
+        "date": "2025-06-14",
+        "text": "World Blood Donor Day"
+    },
+    {
+        "type": "day",
+        "date": "2025-09-29",
+        "text": "World Heart Day"
+    },
+    {
+        "type": "day",
+        "date": "2025-03-20",
+        "text": "World Oral Health Day"
+    },
+    {
+        "type": "day",
+        "date": "2025-12-01",
+        "text": "World AIDS Day"
+    },
+    {
+        "type": "day",
+        "date": "2025-08-01",
+        "text": "World Breastfeeding Week"
+    },
+    {
+        "type": "day",
+        "date": "2025-02-04",
+        "text": "World Cancer Day"
+    },
+    {
+        "type": "day",
+        "date": "2025-07-28",
+        "text": "World Hepatitis Day"
+    },
+    {
+        "type": "day",
+        "date": "2025-01-25",
+        "text": "National Nutrition Day"
+    },
+    {
+        "type": "day",
+        "date": "2025-10-16",
+        "text": "World Food Day"
+    },
+    {
+        "fact": "Drinking water before meals can help with weight loss by making you feel fuller."
+    },
+    {
+        "fact": "Laughter boosts your immune system and reduces stress hormones."
+    },
+    {
+        "fact": "Walking briskly for 30 minutes a day can lower the risk of heart disease."
+    },
+    {
+        "fact": "Dark chocolate is rich in antioxidants and can improve heart health."
+    },
+    {
+        "fact": "Getting enough sleep helps improve memory and concentration."
+    },
+    {
+        "fact": "The human brain contains about 86 billion neurons."
+    },
+    {
+        "fact": "Regular exercise can increase the size of your hippocampus, improving memory."
+    },
+    {
+        "fact": "Yogurt contains probiotics that promote a healthy gut microbiome."
+    },
+    {
+        "fact": "Vitamin D is essential for calcium absorption and bone health."
+    },
+    {
+        "fact": "Smiling can actually trick your brain into feeling happier."
+    },
+    {
+        "fact": "Sitting for more than 8 hours a day increases risk of early death."
+    },
+    {
+        "fact": "Apples are 25% air, which is why they float in water."
+    },
+    {
+        "fact": "Exercise releases endorphins, natural mood elevators."
+    },
+    {
+        "fact": "A good night's sleep can improve your metabolism and reduce cravings."
+    },
+    {
+        "fact": "Sunlight exposure increases serotonin levels, boosting mood."
+    },
+    {
+        "fact": "Drinking green tea may help reduce the risk of certain cancers."
+    },
+    {
+        "fact": "Your skin is your largest organ and renews itself every 28 days."
+    },
+    {
+        "fact": "Regular meditation can reduce symptoms of anxiety and depression."
+    },
+    {
+        "fact": "Eating slowly helps with digestion and prevents overeating."
+    },
+    {
+        "fact": "Fiber-rich foods aid in digestion and help maintain a healthy weight."
+    },
+    {
+        "fact": "Handwashing reduces respiratory infections by up to 21%."
+    },
+    {
+        "fact": "Drinking coffee in moderation can lower the risk of Parkinson’s disease."
+    },
+    {
+        "fact": "Omega-3 fatty acids found in fish are important for brain health."
+    },
+    {
+        "fact": "Eating spicy foods can temporarily boost your metabolism."
+    },
+    {
+        "fact": "The average adult human heart beats about 100,000 times per day."
+    },
+    {
+        "fact": "Chewing gum can help improve focus and memory."
+    },
+    {
+        "fact": "Bananas contain potassium which helps regulate blood pressure."
+    },
+    {
+        "fact": "A healthy gut can influence your mood and mental health."
+    },
+    {
+        "fact": "Caffeine can improve physical performance by increasing adrenaline."
+    },
+    {
+        "fact": "Blueberries are high in antioxidants that protect your cells."
+    },
+    {
+        "fact": "Standing more often during the day reduces risks of chronic diseases."
+    },
+    {
+        "fact": "The sense of smell is closely linked to memory and emotions."
+    },
+    {
+        "fact": "Music therapy can reduce anxiety and improve heart rate variability."
+    },
+    {
+        "fact": "Chronic stress can weaken the immune system over time."
+    },
+    {
+        "fact": "Tomatoes contain lycopene, which is good for heart health."
+    },
+    {
+        "fact": "Eating nuts regularly can reduce the risk of heart disease."
+    },
+    {
+        "fact": "The gut contains more neurons than the spinal cord."
+    },
+    {
+        "fact": "Regular sleep patterns improve mental and physical health."
+    },
+    {
+        "fact": "Sitting too long can stiffen your muscles and joints."
+    },
+    {
+        "fact": "Whole grains support heart health and improve digestion."
+    },
+    {
+        "fact": "Vitamin C helps your body heal wounds faster."
+    },
+    {
+        "fact": "Stretching improves blood flow and muscle flexibility."
+    },
+    {
+        "fact": "Drinking water boosts brain function and mood."
+    },
+    {
+        "fact": "Dark leafy greens are packed with essential vitamins and minerals."
+    },
+    {
+        "fact": "Reading regularly can improve brain connectivity and function."
+    },
+    {
+        "fact": "Good posture prevents back pain and improves breathing."
+    },
+    {
+        "fact": "Vitamin B12 is essential for nerve health and energy production."
+    },
+    {
+        "fact": "Regular physical activity helps reduce symptoms of depression."
+    },
+    {
+        "fact": "Eating breakfast improves concentration and productivity."
+    },
+    {
+        "fact": "Hydration is key to maintaining healthy skin and organ function."
+    },
+    {
+        "fact": "Social connections positively impact overall health and longevity."
+    },
+    {
+        "fact": "Sun exposure in moderation helps your body produce vitamin D."
+    },
+    {
+        "fact": "Mindfulness practices can reduce blood pressure and improve sleep."
+    }
+]

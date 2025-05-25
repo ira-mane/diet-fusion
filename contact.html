@@ -11,7 +11,10 @@
 
   <!-- Navbar -->
   <header class="bg-green-600 text-white p-4 flex justify-between items-center">
-    <div class="text-xl font-bold">Diet Fusion</div>
+    <div class="flex items-left gap-2">
+      <img src="assets/images/logo-img.png" alt="Diet Fusion Logo" class="h-14 w-auto">
+      <div class="text-xl font-bold py-3">Diet Fusion</div>
+    </div>
     <nav class="space-x-6 hidden md:flex">
       <a href="index.html" class="hover:underline">Home</a>
       <a href="about.html" class="hover:underline">About</a>
@@ -54,43 +57,106 @@
 
     <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-6 space-y-6">
 
-      <div>
-        <h2 class="text-xl font-semibold text-[#3B5704] mb-2">📍 Restaurant Address</h2>
-        <p>Andheri - Ghatkopar Link Rd, Opp. Noori Masjid, Lokmanya Tilak Nagar, Saki Naka, Mumbai, Maharashtra 400072</p>
-        <p class="mt-1"><a href="https://g.co/kgs/PZ5XPVZ" target="_blank" class="text-green-700 underline">View on Google Maps</a></p>
-      </div>
-
-      <div>
-        <h2 class="text-xl font-semibold text-[#3B5704] mb-2">🍜 Swiggy Orders</h2>
-        <p><a href="https://www.swiggy.com/city/mumbai/diet-fusion-marol-sakinaka-rest1084601" target="_blank" class="text-green-700 underline">Order from Swiggy</a></p>
-        <p>📞 Offline Restaurant Orders: <a href="tel:+919004450603" class="text-green-700 underline">+91 90044 50603</a></p>
-      </div>
-
-      <div>
-        <h2 class="text-xl font-semibold text-[#3B5704] mb-2">🧬 Diet Consultation</h2>
-        <p>📞 Consultation Phone: <a href="tel:+919867089284" class="text-green-700 underline">+91 98670 89284</a></p>
-        <p>🕒 Timing: Monday to Friday – 9:00 AM to 5:00 PM</p>
-      </div>
-
-      <div>
-        <h2 class="text-xl font-semibold text-[#3B5704] mb-2">📱 Social Media</h2>
-        <p><a href="https://www.instagram.com/dietfusion_official/?hl=en" target="_blank" class="text-green-700 underline">Instagram: @dietfusion_official</a></p>
-      </div>
-
+      <div class="bg-white py-10 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-xl font-semibold text-[#3B5704] mb-2">📍 Restaurant Address</h2>
+    <!-- Embedded Google Map -->
+    <div class="mt-6 shadow-lg rounded overflow-hidden">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.1529034536024!2d72.89240350191326!3d19.10094696626902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9db1878f4b7%3A0xce7827697869df4d!2sDiet%20Fusion!5e0!3m2!1sen!2sin!4v1748156164423!5m2!1sen!2sin" 
+        width="100%" 
+        height="400" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
+  </div>
+</div>
+
+
+     <div class="bg-white p-5 rounded-lg shadow hover:shadow-md transition">
+  <h3 class="text-lg font-semibold text-[#3B5704] mb-4">🍜 Swiggy Orders</h3>
+
+  <!-- Swiggy Order -->
+  <p class="flex items-center space-x-2 mb-2">
+    <img src="assets/images/swiggy-logo.png" alt="Swiggy Logo" class="w-5 h-5" />
+    <a href="https://www.swiggy.com/city/mumbai/diet-fusion-marol-sakinaka-rest1084601" target="_blank" class="text-green-700 underline">
+      Order from Swiggy
+    </a>
+  </p>
+
+  <!-- Offline Order -->
+  <p class="flex items-center space-x-2 mt-2">
+    <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M6.62 10.79a15.464 15.464 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C10.84 21 3 13.16 3 3.5 3 2.95 3.45 2.5 4 2.5H7.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.12.35.04.74-.24 1.01l-2.2 2.2z"/>
+    </svg>
+    <a href="tel:+919004450603" class="text-green-700 underline">
+      +91 90044 50603
+    </a>
+  </p>
+</div>
+
+
+       <div class="bg-white p-5 rounded-lg shadow hover:shadow-md transition">
+        <h3 class="text-lg font-semibold text-[#3B5704] mb-2">🧬 Diet Consultation</h3>
+        <p>📞 Phone: 
+          <a href="tel:+919867089284" class="text-green-700 underline">+91 98670 89284</a>
+        </p>
+        <p class="mt-2">🕒 Timing: Mon–Fri, 9:00 AM – 5:00 PM</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="bg-white p-5 rounded-lg shadow hover:shadow-md transition">
+  <h3 class="text-lg font-semibold text-[#3B5704] mb-4">📱 Social Media</h3>
+  
+  <!-- Instagram -->
+  <p class="flex items-center space-x-2 mb-2">
+    <svg class="w-5 h-5 text-pink-600" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M7.75 2h8.5C19.216 2 22 4.784 22 8.25v7.5C22 19.216 19.216 22 16.25 22h-8.5C4.784 22 2 19.216 2 16.25v-7.5C2 4.784 4.784 2 7.75 2zm0 2C5.678 4 4 5.678 4 7.75v8.5C4 18.322 5.678 20 7.75 20h8.5C18.322 20 20 18.322 20 16.25v-8.5C20 5.678 18.322 4 16.25 4h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6zm4.75-2a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"/>
+    </svg>
+    <a href="https://www.instagram.com/dietfusion_official/?hl=en" target="_blank" class="text-green-700 underline">
+      @dietfusion_official
+    </a>
+  </p>
+
+  <!-- Facebook -->
+  <p class="flex items-center space-x-2">
+    <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M22 12a10 10 0 10-11.5 9.9v-7h-2v-3h2v-2.2c0-2 1.2-3.1 3-3.1.9 0 1.9.2 1.9.2v2.1h-1.1c-1.1 0-1.5.7-1.5 1.4V12h2.6l-.4 3h-2.2v7A10 10 0 0022 12z"/>
+    </svg>
+    <a href="https://www.facebook.com/people/Shumaila-Sayyed/pfbid0GbHJxfVVuCma75XmcLqQSnEtPuRyAZs1KihW47jPP7ZE7wN7giSwpdAVrYKeF3fRl/" target="_blank" class="text-green-700 underline">
+      @dietfusion
+    </a>
+  </p>
+</div>
+
   </main>
 
   <!-- Footer -->
-  <footer class="bg-green-600 text-white p-6 text-center space-y-4 mt-auto">
-    <div>&copy; 2025 Diet Fusion. All rights reserved.</div>
-    <div class="space-x-6">
+ <footer class="bg-green-600 text-white px-6 py-8 text-center md:text-left space-y-4 mt-auto">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+    
+    <!-- Left: Copyright -->
+    <div class="text-sm">
+      &copy; 2025 <strong>Diet Fusion</strong>. All rights reserved.
+    </div>
+
+    <!-- Center: Links -->
+    <div class="space-x-6 text-sm">
       <a href="policy.html" class="hover:underline">Privacy Policy</a>
+      <a href="terms.html" class="hover:underline">Terms & Conditions</a>
       <a href="https://www.instagram.com/dietfusion_official/?hl=en" target="_blank" class="hover:underline">Instagram</a>
     </div>
-    <div class="mt-4 text-sm">
-      Made & Designed by <strong>Ira</strong> | Email: 
+
+    <!-- Right: Designer Credit -->
+    <div class="text-sm text-center md:text-right">
+      Made & Designed by <strong>Ira</strong><br>
       <a href="mailto:irammane14@gmail.com" class="hover:underline">irammane14@gmail.com</a>
     </div>
+  </div>
+</footer>
 <a href="https://wa.me/919867089284" target="_blank" 
    style="position: fixed; bottom: 20px; right: 20px; background-color: white; color: white; 
           border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; 
