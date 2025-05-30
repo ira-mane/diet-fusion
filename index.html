@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Discover personalized diet plans to achieve your health goals. Expert tips and nutrition advice.">
+  <meta name="description"
+    content="Discover personalized diet plans to achieve your health goals. Expert tips and nutrition advice.">
   <meta name="keywords" content="Diet Fusion, Diet Plans, Nutrition, Healthy Living, Wellness">
   <meta name="author" content="Diet Fusion Team">
   <meta name="robots" content="index, follow">
@@ -12,7 +13,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
   <style>
-    html, body {
+    html,
+    body {
       overflow-x: hidden;
     }
   </style>
@@ -21,77 +23,78 @@
 <body class="bg-white text-gray-800 font-sans overflow-x-hidden py-20">
 
   <!-- Navbar -->
-<header class="bg-green-600 text-white p-4 flex justify-between items-center fixed top-0 left-0 right-0 z-50">
-  <div class="flex items-left gap-2">
-    <img src="assets/images/logo-img.png" alt="Diet Fusion Logo" class="h-14 w-auto">
-    <div class="text-xl font-bold py-3">Diet Fusion</div>
-  </div>
-  <nav class="space-x-6 hidden md:flex">
-    <a href="index.html" class="hover:underline">Home</a>
-    <a href="about.html" class="hover:underline">About</a>
-    <a href="blog.html" class="hover:underline">Blog</a>
-    <a href="pricing.html" class="hover:underline">Pricing</a>
-    <a href="bmi.html" class="hover:underline">BMI</a>
-    <a href="faq.html" class="hover:underline">FAQ</a>
-    <a href="contact.html" class="hover:underline">Contact</a>
-    <a href="booking.html" class="hover:underline">Booking</a>
+  <header class="bg-green-600 text-white p-4 flex justify-between items-center fixed top-0 left-0 right-0 z-50">
+    <div class="flex items-left gap-2">
+      <img src="assets/images/logo-img.png" alt="Diet Fusion Logo" class="h-14 w-auto">
+      <div class="text-xl font-bold py-3">Diet Fusion</div>
+    </div>
+    <nav class="space-x-6 hidden md:flex">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="about.html" class="hover:underline">About</a>
+      <a href="blog.html" class="hover:underline">Blog</a>
+      <a href="pricing.html" class="hover:underline">Pricing</a>
+      <a href="bmi.html" class="hover:underline">BMI</a>
+      <a href="faq.html" class="hover:underline">FAQ</a>
+      <a href="contact.html" class="hover:underline">Contact</a>
+      <a href="booking.html" class="hover:underline">Booking</a>
+    </nav>
+
+    <!-- Mobile menu button -->
+    <button id="menu-btn" class="md:hidden focus:outline-none z-50" aria-label="Toggle menu" aria-expanded="false">
+      <svg id="menu-icon" class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" viewBox="0 0 24 24">
+        <path d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg id="close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <path d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </header>
+
+  <!-- Overlay -->
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
+
+  <!-- Side mobile menu -->
+  <nav id="mobile-menu"
+    class="fixed top-0 right-0 w-64 h-full bg-green-600 text-white transform translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden p-6 space-y-6">
+    <a href="index.html" class="block hover:underline">Home</a>
+    <a href="about.html" class="block hover:underline">About</a>
+    <a href="blog.html" class="block hover:underline">Blog</a>
+    <a href="pricing.html" class="block hover:underline">Pricing</a>
+    <a href="bmi.html" class="block hover:underline">BMI</a>
+    <a href="faq.html" class="block hover:underline">FAQ</a>
+    <a href="contact.html" class="block hover:underline">Contact</a>
+    <a href="booking.html" class="block hover:underline">Booking</a>
   </nav>
 
-  <!-- Mobile menu button -->
-  <button id="menu-btn" class="md:hidden focus:outline-none z-50" aria-label="Toggle menu" aria-expanded="false">
-    <svg id="menu-icon" class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
-         stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-      <path d="M4 6h16M4 12h16M4 18h16"/>
-    </svg>
-    <svg id="close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" stroke-width="2"
-         stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-      <path d="M6 18L18 6M6 6l12 12"/>
-    </svg>
-  </button>
-</header>
+  <!-- Script -->
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('overlay');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+    const links = menu.querySelectorAll('a');
 
-<!-- Overlay -->
-<div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
+    function toggleMenu() {
+      const isOpen = menu.classList.contains('translate-x-0');
+      menu.classList.toggle('translate-x-0');
+      menu.classList.toggle('translate-x-full');
+      overlay.classList.toggle('hidden');
+      menuIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', !isOpen);
+    }
 
-<!-- Side mobile menu -->
-<nav id="mobile-menu" class="fixed top-0 right-0 w-64 h-full bg-green-600 text-white transform translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden p-6 space-y-6">
-  <a href="index.html" class="block hover:underline">Home</a>
-  <a href="about.html" class="block hover:underline">About</a>
-  <a href="blog.html" class="block hover:underline">Blog</a>
-  <a href="pricing.html" class="block hover:underline">Pricing</a>
-  <a href="bmi.html" class="block hover:underline">BMI</a>
-  <a href="faq.html" class="block hover:underline">FAQ</a>
-  <a href="contact.html" class="block hover:underline">Contact</a>
-  <a href="booking.html" class="block hover:underline">Booking</a>
-</nav>
+    btn.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', toggleMenu);
 
-<!-- Script -->
-<script>
-  const btn = document.getElementById('menu-btn');
-  const menu = document.getElementById('mobile-menu');
-  const overlay = document.getElementById('overlay');
-  const menuIcon = document.getElementById('menu-icon');
-  const closeIcon = document.getElementById('close-icon');
-  const links = menu.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', toggleMenu);
+    });
+  </script>
 
-  function toggleMenu() {
-    const isOpen = menu.classList.contains('translate-x-0');
-    menu.classList.toggle('translate-x-0');
-    menu.classList.toggle('translate-x-full');
-    overlay.classList.toggle('hidden');
-    menuIcon.classList.toggle('hidden');
-    closeIcon.classList.toggle('hidden');
-    btn.setAttribute('aria-expanded', !isOpen);
-  }
-
-  btn.addEventListener('click', toggleMenu);
-  overlay.addEventListener('click', toggleMenu);
-
-  links.forEach(link => {
-    link.addEventListener('click', toggleMenu);
-  });
-</script>
- 
 
 
   <!-- Hero Section -->
@@ -120,27 +123,33 @@
       </div>
 
       <!-- Hero Image -->
-  <div class="md:w-2/3">
-    <img src="assets/images/foodlogo-bg.png" alt="Diet Fusion Wellness" class="w-full rounded-2xl" />
-  </div>
+      <div class="md:w-2/3">
+        <img src="assets/images/foodlogo-bg.png" alt="Diet Fusion Wellness" class="w-full rounded-2xl" />
+      </div>
 
 
     </div>
   </section>
   <!-- health msg -->
-<div id="health-strip" class="text-green-800 p-2 text-center text-sm font-medium overflow-hidden whitespace-nowrap animate-marquee"></div>
-<style>
-@keyframes marquee {
-  0%   { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
+  <div id="health-strip"
+    class="text-green-800 p-2 text-center text-sm font-medium overflow-hidden whitespace-nowrap animate-marquee"></div>
+  <style>
+    @keyframes marquee {
+      0% {
+        transform: translateX(100%);
+      }
 
-.animate-marquee {
-  display: inline-block;
-  white-space: nowrap;
-  animation: marquee 20s linear infinite;
-}
-</style>
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .animate-marquee {
+      display: inline-block;
+      white-space: nowrap;
+      animation: marquee 20s linear infinite;
+    }
+  </style>
 
   <!-- Info Section -->
   <section class="bg-white py-10 px-6">
@@ -223,6 +232,46 @@
     </div>
   </section>
 
+  <!-- Testimonial Section -->
+
+  <section class="bg-[#F8FFE8] py-12 px-6">
+    <h2 class="text-3xl font-bold text-center text-[#3B5704] mb-10">🌟 Real Transformations</h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+      <!-- Testimonial Card -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <div class="flex gap-4 mb-4">
+          <img src="assets/images/Before.jpg" alt="Before" class="w-1/2 rounded-lg object-cover">
+          <img src="assets/images/After (1).png" alt="After" class="w-1/2 rounded-lg object-cover">
+        </div>
+        <h3 class="text-lg font-semibold text-[#3B5704] mb-1">Mariam A.</h3>
+        <p class="text-sm italic text-gray-600 mb-2">Our Client</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <div class="flex gap-4 mb-4">
+          <img src="assets/images/before2.jpg" alt="Before" class="w-64 h-64 rounded-lg object-cover">
+          <img src="assets/images/after2.jpg" alt="After" class="w-64 h-64 rounded-lg object-cover">
+
+        </div>
+        <h3 class="text-lg font-semibold text-[#3B5704] mb-1">Aneesha R.</h3>
+        <p class="text-sm italic text-gray-600 mb-2">Our Client</p>
+      </div>
+
+
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+  <div class="flex flex-col gap-2 mb-4">
+    <p class="font-bold text-3xl text-gray-800">Our weight loss diet plan is designed just for you — effective, flexible, and results-driven.
+        Our certified nutritionist will guide you every step of the way to help you lose weight
+        in a healthy, sustainable manner.</p>
+  </div>
+</div>
+
+
+    </div>
+  </section>
+
 
   <!-- Image gallery section -->
   <section class="bg-green-50 py-16 px-4 md:px-10">
@@ -300,36 +349,36 @@
 
   <!-- Footer -->
   <footer class="bg-green-600 text-white px-6 py-8 text-center md:text-left space-y-4 mt-auto">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-    
-    <!-- Left: Copyright -->
-    <div class="text-sm">
-      &copy; 2025 <strong>Diet Fusion</strong>. All rights reserved.
-    </div>
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
 
-    <!-- Center: Links -->
-    <div class="space-x-6 text-sm">
-      <a href="policy.html" class="hover:underline">Privacy Policy</a>
-      <a href="terms.html" class="hover:underline">Terms & Conditions</a>
-      <a href="https://www.instagram.com/dietfusion_official/?hl=en" target="_blank" class="hover:underline">Instagram</a>
-    </div>
+      <!-- Left: Copyright -->
+      <div class="text-sm">
+        &copy; 2025 <strong>Diet Fusion</strong>. All rights reserved.
+      </div>
 
-    <!-- Right: Designer Credit -->
-    <div class="text-sm text-center md:text-right">
-      Made & Designed by <strong>Ira</strong><br>
-     <a href="mailto:7pixel.work@gmail.com" class="hover:underline">7pixel.work@gmail.com</a>
+      <!-- Center: Links -->
+      <div class="space-x-6 text-sm">
+        <a href="policy.html" class="hover:underline">Privacy Policy</a>
+        <a href="terms.html" class="hover:underline">Terms & Conditions</a>
+        <a href="https://www.instagram.com/dietfusion_official/?hl=en" target="_blank"
+          class="hover:underline">Instagram</a>
+      </div>
+
+      <!-- Right: Designer Credit -->
+      <div class="text-sm text-center md:text-right">
+        Made & Designed by <strong>Ira</strong><br>
+        <a href="mailto:7pixel.work@gmail.com" class="hover:underline">7pixel.work@gmail.com</a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 
   <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/919867089284" target="_blank" 
-   style="position: fixed; bottom: 20px; right: 20px; background-color: white; color: white; 
+  <a href="https://wa.me/919867089284" target="_blank" style="position: fixed; bottom: 20px; right: 20px; background-color: white; color: white; 
           border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; 
           justify-content: center; box-shadow: 0 2px 10px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none;">
-  <img src="assets/images/whatsapp-icon.png" alt="WhatsApp" style="width: 32px; height: 32px;" />
-</a>
+    <img src="assets/images/whatsapp-icon.png" alt="WhatsApp" style="width: 32px; height: 32px;" />
+  </a>
 
 
   <!-- Newsletter subscription script -->
@@ -361,59 +410,59 @@
   </script>
 
   <!-- Image slider script -->
-<script>
-  const slider = document.getElementById('slider');
-  const images = slider.querySelectorAll('img');
-  const imageWidth = images[0].clientWidth + 16; // width + margin
-  let currentIndex = 0;
+  <script>
+    const slider = document.getElementById('slider');
+    const images = slider.querySelectorAll('img');
+    const imageWidth = images[0].clientWidth + 16; // width + margin
+    let currentIndex = 0;
 
-  document.getElementById('next').addEventListener('click', () => {
-    if (currentIndex < images.length - 1) {
-      currentIndex++;
-      slider.style.transform = `translateX(-${imageWidth * currentIndex}px)`;
-    }
-  });
-
-  document.getElementById('prev').addEventListener('click', () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      slider.style.transform = `translateX(-${imageWidth * currentIndex}px)`;
-    }
-  });
-
-  window.addEventListener('resize', () => {
-    slider.style.transform = `translateX(-${(images[0].clientWidth + 16) * currentIndex}px)`;
-  });
-</script>
-<!-- Health message display -->
- <script>
-  async function loadHealthStrip() {
-    try {
-      const res = await fetch('data.json');
-      const data = await res.json();
-
-      const today = new Date();
-      const todayStr = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-
-      const todayObservance = data.find(item => item.date === todayStr && item.observance);
-
-      let message = '';
-      if (todayObservance) {
-        message = `🗓️ Today is ${todayObservance.observance} — ${todayObservance.fact}`;
-      } else {
-        const facts = data.filter(item => item.fact && !item.observance);
-        const random = facts[Math.floor(Math.random() * facts.length)];
-        message = `💡 Did you know? ${random.fact}`;
+    document.getElementById('next').addEventListener('click', () => {
+      if (currentIndex < images.length - 1) {
+        currentIndex++;
+        slider.style.transform = `translateX(-${imageWidth * currentIndex}px)`;
       }
+    });
 
-      document.getElementById('health-strip').textContent = message;
-    } catch (err) {
-      console.error('Failed to load health data:', err);
+    document.getElementById('prev').addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        slider.style.transform = `translateX(-${imageWidth * currentIndex}px)`;
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      slider.style.transform = `translateX(-${(images[0].clientWidth + 16) * currentIndex}px)`;
+    });
+  </script>
+  <!-- Health message display -->
+  <script>
+    async function loadHealthStrip() {
+      try {
+        const res = await fetch('data.json');
+        const data = await res.json();
+
+        const today = new Date();
+        const todayStr = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
+        const todayObservance = data.find(item => item.date === todayStr && item.observance);
+
+        let message = '';
+        if (todayObservance) {
+          message = `🗓️ Today is ${todayObservance.observance} — ${todayObservance.fact}`;
+        } else {
+          const facts = data.filter(item => item.fact && !item.observance);
+          const random = facts[Math.floor(Math.random() * facts.length)];
+          message = `💡 Did you know? ${random.fact}`;
+        }
+
+        document.getElementById('health-strip').textContent = message;
+      } catch (err) {
+        console.error('Failed to load health data:', err);
+      }
     }
-  }
 
-  loadHealthStrip();
-</script>
+    loadHealthStrip();
+  </script>
 </body>
 
 </html>
